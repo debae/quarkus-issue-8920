@@ -1,0 +1,14 @@
+quarkus:
+  log:
+    level: INFO
+    console:
+      enable: true
+      format: {"timestamp": "%d{yyyy-MM-dd'T'HH:mm:ss.SSS}", "type":"LogMessage", "level": "%p", "loggerName": "%C", "message": "%s", "appName":"location", "componentName":"location-lambda", "stackTrace":"%e" }
+  lambda:
+    handler: LocationLambda
+  ssl:
+    native: true
+
+locations:
+  - prefix: 27
+    name: LocationName
